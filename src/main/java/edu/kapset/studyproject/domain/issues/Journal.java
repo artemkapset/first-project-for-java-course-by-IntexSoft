@@ -3,26 +3,17 @@ package edu.kapset.studyproject.domain.issues;
 import java.time.LocalDate;
 
 public class Journal extends Issue {
-    private String name;
+
     private Integer number;
     private LocalDate dateOfIssue;
 
     public Journal() {
     }
 
-    public Journal(Long issueId, String name, Integer number, LocalDate dateOfIssue) {
-        super(issueId);
-        this.name = name;
+    public Journal(String name, Long issueId, Integer number, LocalDate dateOfIssue) {
+        super(name, issueId);
         this.number = number;
         this.dateOfIssue = dateOfIssue;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Integer getNumber() {

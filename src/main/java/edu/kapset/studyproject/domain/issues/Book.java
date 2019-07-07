@@ -5,26 +5,16 @@ import edu.kapset.studyproject.domain.persons.Author;
 import java.time.LocalDate;
 
 public class Book extends Issue {
-    private String name;
     private Author author;
     private LocalDate yearOfIssue;
 
     public Book() {
     }
 
-    public Book(Long issueId, String name, Author author, LocalDate yearOfIssue) {
-        super(issueId);
-        this.name = name;
+    public Book(String name, Long issueId, Author author, LocalDate yearOfIssue) {
+        super(name, issueId);
         this.author = author;
         this.yearOfIssue = yearOfIssue;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Author getAuthor() {

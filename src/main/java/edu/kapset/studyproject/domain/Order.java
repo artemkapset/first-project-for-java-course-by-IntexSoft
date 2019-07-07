@@ -1,7 +1,7 @@
 package edu.kapset.studyproject.domain;
 
 import edu.kapset.studyproject.domain.issues.Issue;
-import edu.kapset.studyproject.domain.persons.Reader;
+import edu.kapset.studyproject.domain.persons.Client;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class Order {
     private Long orderId;
     private LocalDateTime orderDate;
     private OrderStatus orderStatus;
-    private Reader reader;
+    private Client client;
     private List<Issue> issues;
 
     public Long getOrderId() {
@@ -38,12 +38,12 @@ public class Order {
         this.orderStatus = orderStatus;
     }
 
-    public Reader getReader() {
-        return reader;
+    public Client getClient() {
+        return client;
     }
 
-    public void setReader(Reader reader) {
-        this.reader = reader;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public List<Issue> getIssues() {
