@@ -5,6 +5,7 @@ import edu.kapset.studyproject.dao.impl.OrderDaoImpl;
 import edu.kapset.studyproject.domain.Order;
 import edu.kapset.studyproject.service.OrderService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderServiceImpl implements OrderService {
@@ -28,7 +29,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Order> getOrdersBySurname(String s) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
@@ -43,7 +44,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Order> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

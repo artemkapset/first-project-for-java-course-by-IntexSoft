@@ -1,13 +1,13 @@
 package edu.kapset.studyproject.dao;
 
-import java.util.List;
+import java.util.Collection;
 
 public interface GenericDao<T> {
     T save(T t);
 
     T update(T t);
 
-    List<T> getAll();
+    Collection<T> getAll();
 
     T getByName(String s);
 

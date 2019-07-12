@@ -1,13 +1,13 @@
 package edu.kapset.studyproject.service;
 
-import java.util.List;
+import java.util.Collection;
 
 public interface GenericService<T> {
     T save(T t);
 
     T update(T t);
 
-    List<T> getAll();
+    Collection<T> getAll();
 
     T getByName(String s);
 

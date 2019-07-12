@@ -3,6 +3,7 @@ package edu.kapset.studyproject.dao.impl;
 import edu.kapset.studyproject.dao.AuthorDao;
 import edu.kapset.studyproject.domain.persons.Author;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AuthorDaoImpl implements AuthorDao {
@@ -34,7 +35,7 @@ public class AuthorDaoImpl implements AuthorDao {
 
     @Override
     public List<Author> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

@@ -5,6 +5,7 @@ import edu.kapset.studyproject.dao.impl.ClientDaoImpl;
 import edu.kapset.studyproject.domain.persons.Client;
 import edu.kapset.studyproject.service.ClientService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientServiceImpl implements ClientService {
@@ -43,7 +44,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<Client> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

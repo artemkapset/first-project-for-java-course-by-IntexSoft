@@ -3,6 +3,7 @@ package edu.kapset.studyproject.dao.impl;
 import edu.kapset.studyproject.dao.JournalDao;
 import edu.kapset.studyproject.domain.issues.Journal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class JournalDaoImpl implements JournalDao {
@@ -34,7 +35,7 @@ public class JournalDaoImpl implements JournalDao {
 
     @Override
     public List<Journal> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

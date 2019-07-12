@@ -3,6 +3,7 @@ package edu.kapset.studyproject.dao.impl;
 import edu.kapset.studyproject.dao.BookDao;
 import edu.kapset.studyproject.domain.issues.Book;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookDaoImpl implements BookDao {
@@ -24,7 +25,7 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public List<Book> getByAuthor(String s) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
@@ -39,7 +40,7 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public List<Book> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

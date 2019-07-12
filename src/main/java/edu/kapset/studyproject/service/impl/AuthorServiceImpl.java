@@ -5,6 +5,7 @@ import edu.kapset.studyproject.dao.impl.AuthorDaoImpl;
 import edu.kapset.studyproject.domain.persons.Author;
 import edu.kapset.studyproject.service.AuthorService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AuthorServiceImpl implements AuthorService {
@@ -38,7 +39,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public List<Author> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

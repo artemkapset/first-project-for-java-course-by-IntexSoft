@@ -2,7 +2,7 @@ package edu.kapset.studyproject.domain.issues;
 
 import java.time.LocalDate;
 
-public class Journal extends Issue {
+public class Journal extends Issue{
 
     private Integer number;
     private LocalDate dateOfIssue;

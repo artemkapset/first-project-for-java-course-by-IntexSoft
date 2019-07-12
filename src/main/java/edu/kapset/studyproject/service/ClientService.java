@@ -2,9 +2,7 @@ package edu.kapset.studyproject.service;
 
 import edu.kapset.studyproject.domain.persons.Client;
 
-import java.util.List;
-
-public interface ClientService extends GenericService<Client> {
+public interface ClientService extends PersonService<Client> {
 
     Client getById(Long id);
 

@@ -5,6 +5,7 @@ import edu.kapset.studyproject.dao.impl.LibrarianDaoImpl;
 import edu.kapset.studyproject.domain.persons.Librarian;
 import edu.kapset.studyproject.service.LibrarianService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LibrarianServiceImpl implements LibrarianService {
@@ -28,7 +29,7 @@ public class LibrarianServiceImpl implements LibrarianService {
 
     @Override
     public List<Librarian> getByCategory(Integer i) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
@@ -43,7 +44,7 @@ public class LibrarianServiceImpl implements LibrarianService {
 
     @Override
     public List<Librarian> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

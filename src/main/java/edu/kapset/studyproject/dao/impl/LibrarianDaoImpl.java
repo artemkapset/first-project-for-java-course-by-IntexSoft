@@ -3,6 +3,7 @@ package edu.kapset.studyproject.dao.impl;
 import edu.kapset.studyproject.dao.LibrarianDao;
 import edu.kapset.studyproject.domain.persons.Librarian;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LibrarianDaoImpl implements LibrarianDao {
@@ -24,7 +25,7 @@ public class LibrarianDaoImpl implements LibrarianDao {
 
     @Override
     public List<Librarian> getByCategory(Integer i) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
@@ -39,7 +40,7 @@ public class LibrarianDaoImpl implements LibrarianDao {
 
     @Override
     public List<Librarian> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

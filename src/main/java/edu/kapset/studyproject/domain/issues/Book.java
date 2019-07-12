@@ -4,7 +4,7 @@ import edu.kapset.studyproject.domain.persons.Author;
 
 import java.time.LocalDate;
 
-public class Book extends Issue {
+public class Book extends Issue{
     private Author author;
     private LocalDate yearOfIssue;
 

@@ -5,6 +5,7 @@ import edu.kapset.studyproject.dao.impl.JournalDaoImpl;
 import edu.kapset.studyproject.domain.issues.Journal;
 import edu.kapset.studyproject.service.JournalService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class JournalServiceImpl implements JournalService {
@@ -38,7 +39,7 @@ public class JournalServiceImpl implements JournalService {
 
     @Override
     public List<Journal> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

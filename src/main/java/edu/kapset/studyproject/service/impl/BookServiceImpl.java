@@ -5,6 +5,7 @@ import edu.kapset.studyproject.dao.impl.BookDaoImpl;
 import edu.kapset.studyproject.domain.issues.Book;
 import edu.kapset.studyproject.service.BookService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookServiceImpl implements BookService {
@@ -28,7 +29,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> getByAuthor(String s) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
@@ -43,7 +44,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

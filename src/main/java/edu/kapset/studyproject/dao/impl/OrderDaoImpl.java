@@ -4,6 +4,7 @@ import edu.kapset.studyproject.dao.OrderDao;
 import edu.kapset.studyproject.domain.Order;
 import edu.kapset.studyproject.exceptions.DaoException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
@@ -25,7 +26,7 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public List<Order> getOrdersBySurname(String s) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
@@ -40,7 +41,7 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public List<Order> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

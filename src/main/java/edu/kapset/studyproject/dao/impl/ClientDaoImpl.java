@@ -3,6 +3,7 @@ package edu.kapset.studyproject.dao.impl;
 import edu.kapset.studyproject.dao.ClientDao;
 import edu.kapset.studyproject.domain.persons.Client;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientDaoImpl implements ClientDao {
@@ -39,7 +40,7 @@ public class ClientDaoImpl implements ClientDao {
 
     @Override
     public List<Client> getAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
