@@ -7,6 +7,7 @@ import edu.kapset.studyproject.service.LibrarianService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class LibrarianServiceImpl implements LibrarianService {
 
@@ -33,13 +34,13 @@ public class LibrarianServiceImpl implements LibrarianService {
     }
 
     @Override
-    public Librarian save(Librarian librarian) {
-        return null;
+    public Optional<Librarian> save(Librarian librarian) {
+        return Optional.ofNullable(librarian);
     }
 
     @Override
-    public Librarian update(Librarian librarian) {
-        return null;
+    public Optional<Librarian> update(Librarian librarian) {
+        return Optional.ofNullable(librarian);
     }
 
     @Override
@@ -48,8 +49,9 @@ public class LibrarianServiceImpl implements LibrarianService {
     }
 
     @Override
-    public Librarian getByName(String s) {
-        return null;
+    public Optional<Librarian> getByName(String s) {
+        Librarian librarian = null;
+        return Optional.ofNullable(librarian);
     }
 
     @Override

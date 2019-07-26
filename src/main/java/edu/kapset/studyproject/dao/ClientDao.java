@@ -2,7 +2,8 @@ package edu.kapset.studyproject.dao;
 
 import edu.kapset.studyproject.domain.persons.Client;
 
-public interface ClientDao extends PersonDao<Client> {
+import java.util.Optional;
 
-    Client getById(Long id);
+public interface ClientDao extends PersonDao<Client> {
+    Optional<Client> getById(Long id);
 }

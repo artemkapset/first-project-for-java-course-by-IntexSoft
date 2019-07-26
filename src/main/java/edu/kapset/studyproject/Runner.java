@@ -5,3 +5,6 @@ public class Runner {
         System.out.println("Проверка работоспособности приложения");
     }
 }
+
+
+

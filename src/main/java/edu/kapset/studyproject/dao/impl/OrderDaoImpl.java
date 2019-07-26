@@ -6,6 +6,7 @@ import edu.kapset.studyproject.exceptions.DaoException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class OrderDaoImpl implements OrderDao {
 
@@ -30,13 +31,13 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public Order save(Order order) {
-        return null;
+    public Optional<Order> save(Order order) {
+        return Optional.ofNullable(order);
     }
 
     @Override
-    public Order update(Order order) {
-        return null;
+    public Optional<Order> update(Order order) {
+        return Optional.ofNullable(order);
     }
 
     @Override
@@ -45,8 +46,9 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public Order getByName(String s) {
-        return null;
+    public Optional<Order> getByName(String s) {
+        Order order = null;
+        return Optional.ofNullable(order);
     }
 
     @Override

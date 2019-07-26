@@ -5,6 +5,7 @@ import edu.kapset.studyproject.domain.issues.Journal;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class JournalDaoImpl implements JournalDao {
 
@@ -24,13 +25,13 @@ public class JournalDaoImpl implements JournalDao {
     // TODO - прописать реализацию методов
 
     @Override
-    public Journal save(Journal journal) {
-        return null;
+    public Optional<Journal> save(Journal journal) {
+        return Optional.ofNullable(journal);
     }
 
     @Override
-    public Journal update(Journal journal) {
-        return null;
+    public Optional<Journal> update(Journal journal) {
+        return Optional.ofNullable(journal);
     }
 
     @Override
@@ -39,8 +40,9 @@ public class JournalDaoImpl implements JournalDao {
     }
 
     @Override
-    public Journal getByName(String s) {
-        return null;
+    public Optional<Journal> getByName(String s) {
+        Journal journal = null;
+        return Optional.ofNullable(journal);
     }
 
     @Override

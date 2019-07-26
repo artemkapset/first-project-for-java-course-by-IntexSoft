@@ -7,6 +7,7 @@ import edu.kapset.studyproject.service.BookService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class BookServiceImpl implements BookService {
 
@@ -33,13 +34,13 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book save(Book book) {
-        return null;
+    public Optional<Book> save(Book book) {
+        return Optional.ofNullable(book);
     }
 
     @Override
-    public Book update(Book book) {
-        return null;
+    public Optional<Book> update(Book book) {
+        return Optional.ofNullable(book);
     }
 
     @Override
@@ -48,8 +49,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book getByName(String s) {
-        return null;
+    public Optional<Book> getByName(String s) {
+        Book book = null;
+        return Optional.ofNullable(book);
     }
 
     @Override

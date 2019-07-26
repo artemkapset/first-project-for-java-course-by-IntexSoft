@@ -5,6 +5,7 @@ import edu.kapset.studyproject.domain.issues.Book;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class BookDaoImpl implements BookDao {
 
@@ -29,13 +30,13 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public Book save(Book book) {
-        return null;
+    public Optional<Book> save(Book book) {
+        return Optional.ofNullable(book);
     }
 
     @Override
-    public Book update(Book book) {
-        return null;
+    public Optional<Book> update(Book book) {
+        return Optional.ofNullable(book);
     }
 
     @Override
@@ -44,8 +45,9 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public Book getByName(String s) {
-        return null;
+    public Optional<Book> getByName(String s) {
+        Book book = null;
+        return Optional.ofNullable(book);
     }
 
     @Override

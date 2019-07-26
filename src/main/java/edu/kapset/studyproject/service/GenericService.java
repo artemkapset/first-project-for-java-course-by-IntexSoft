@@ -1,15 +1,16 @@
 package edu.kapset.studyproject.service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 public interface GenericService<T> {
-    T save(T t);
+    Optional<T> save(T t);
 
-    T update(T t);
+    Optional<T> update(T t);
 
     Collection<T> getAll();
 
-    T getByName(String s);
+    Optional<T> getByName(String s);
 
     void delete(T t);
 

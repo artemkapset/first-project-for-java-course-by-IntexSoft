@@ -5,6 +5,7 @@ import edu.kapset.studyproject.domain.persons.Author;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class AuthorDaoImpl implements AuthorDao {
 
@@ -24,13 +25,13 @@ public class AuthorDaoImpl implements AuthorDao {
     // TODO - прописать реализацию методов
 
     @Override
-    public Author save(Author author) {
-        return null;
+    public Optional<Author> save(Author author) {
+        return Optional.ofNullable(author);
     }
 
     @Override
-    public Author update(Author author) {
-        return null;
+    public Optional<Author> update(Author author) {
+        return Optional.ofNullable(author);
     }
 
     @Override
@@ -39,8 +40,9 @@ public class AuthorDaoImpl implements AuthorDao {
     }
 
     @Override
-    public Author getByName(String s) {
-        return null;
+    public Optional<Author> getByName(String s) {
+        Author author = null;
+        return Optional.ofNullable(author);
     }
 
     @Override

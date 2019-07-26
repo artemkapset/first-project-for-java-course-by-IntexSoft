@@ -5,6 +5,7 @@ import edu.kapset.studyproject.domain.persons.Librarian;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class LibrarianDaoImpl implements LibrarianDao {
 
@@ -29,13 +30,13 @@ public class LibrarianDaoImpl implements LibrarianDao {
     }
 
     @Override
-    public Librarian save(Librarian librarian) {
-        return null;
+    public Optional<Librarian> save(Librarian librarian) {
+        return Optional.ofNullable(librarian);
     }
 
     @Override
-    public Librarian update(Librarian librarian) {
-        return null;
+    public Optional<Librarian> update(Librarian librarian) {
+        return Optional.ofNullable(librarian);
     }
 
     @Override
@@ -44,8 +45,9 @@ public class LibrarianDaoImpl implements LibrarianDao {
     }
 
     @Override
-    public Librarian getByName(String s) {
-        return null;
+    public Optional<Librarian> getByName(String s) {
+        Librarian librarian = null;
+        return Optional.ofNullable(librarian);
     }
 
     @Override

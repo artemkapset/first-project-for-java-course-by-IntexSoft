@@ -5,6 +5,7 @@ import edu.kapset.studyproject.domain.persons.Client;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ClientDaoImpl implements ClientDao {
 
@@ -24,18 +25,19 @@ public class ClientDaoImpl implements ClientDao {
     // TODO - прописать реализацию методов
 
     @Override
-    public Client getById(Long id) {
-        return null;
+    public Optional<Client> getById(Long id) {
+        Client client = null;
+        return Optional.ofNullable(client);
     }
 
     @Override
-    public Client save(Client client) {
-        return null;
+    public Optional<Client> save(Client client) {
+        return Optional.ofNullable(client);
     }
 
     @Override
-    public Client update(Client client) {
-        return null;
+    public Optional<Client> update(Client client) {
+        return Optional.ofNullable(client);
     }
 
     @Override
@@ -44,8 +46,9 @@ public class ClientDaoImpl implements ClientDao {
     }
 
     @Override
-    public Client getByName(String s) {
-        return null;
+    public Optional<Client> getByName(String s) {
+        Client client = null;
+        return Optional.ofNullable(client);
     }
 
     @Override

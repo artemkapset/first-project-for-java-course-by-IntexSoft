@@ -7,6 +7,7 @@ import edu.kapset.studyproject.service.AuthorService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class AuthorServiceImpl implements AuthorService {
 
@@ -28,13 +29,13 @@ public class AuthorServiceImpl implements AuthorService {
     // TODO - прописать реализацию методов
 
     @Override
-    public Author save(Author author) {
-        return null;
+    public Optional<Author> save(Author author) {
+        return Optional.ofNullable(author);
     }
 
     @Override
-    public Author update(Author author) {
-        return null;
+    public Optional<Author> update(Author author) {
+        return Optional.ofNullable(author);
     }
 
     @Override
@@ -43,8 +44,9 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public Author getByName(String s) {
-        return null;
+    public Optional<Author> getByName(String s) {
+        Author author = null;
+        return Optional.ofNullable(author);
     }
 
     @Override

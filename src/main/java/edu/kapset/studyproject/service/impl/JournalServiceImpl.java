@@ -7,6 +7,7 @@ import edu.kapset.studyproject.service.JournalService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class JournalServiceImpl implements JournalService {
 
@@ -28,13 +29,13 @@ public class JournalServiceImpl implements JournalService {
     // TODO - прописать реализацию методов
 
     @Override
-    public Journal save(Journal journal) {
-        return null;
+    public Optional<Journal> save(Journal journal) {
+        return Optional.ofNullable(journal);
     }
 
     @Override
-    public Journal update(Journal journal) {
-        return null;
+    public Optional<Journal> update(Journal journal) {
+        return Optional.ofNullable(journal);
     }
 
     @Override
@@ -43,8 +44,9 @@ public class JournalServiceImpl implements JournalService {
     }
 
     @Override
-    public Journal getByName(String s) {
-        return null;
+    public Optional<Journal> getByName(String s) {
+        Journal journal = null;
+        return Optional.ofNullable(journal);
     }
 
     @Override

@@ -7,6 +7,7 @@ import edu.kapset.studyproject.service.ClientService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ClientServiceImpl implements ClientService {
 
@@ -28,18 +29,19 @@ public class ClientServiceImpl implements ClientService {
     // TODO - прописать реализацию методов
 
     @Override
-    public Client getById(Long id) {
-        return null;
+    public Optional<Client> getById(Long id) {
+        Client client = null;
+        return Optional.ofNullable(client);
     }
 
     @Override
-    public Client save(Client client) {
-        return null;
+    public Optional<Client> save(Client client) {
+        return Optional.ofNullable(client);
     }
 
     @Override
-    public Client update(Client client) {
-        return null;
+    public Optional<Client> update(Client client) {
+        return Optional.ofNullable(client);
     }
 
     @Override
@@ -48,8 +50,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Client getByName(String s) {
-        return null;
+    public Optional<Client> getByName(String s) {
+        Client client = null;
+        return Optional.ofNullable(client);
     }
 
     @Override
