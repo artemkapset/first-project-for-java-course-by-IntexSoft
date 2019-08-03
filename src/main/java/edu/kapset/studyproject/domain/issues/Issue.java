@@ -1,15 +1,16 @@
 package edu.kapset.studyproject.domain.issues;
 
-public abstract class Issue {
+import edu.kapset.studyproject.domain.BaseEntity;
+
+public abstract class Issue extends BaseEntity {
     private String name;
-    private Long issueId;
 
     public Issue() {
     }
 
-    public Issue(String name, Long issueId) {
+    public Issue(Long id, String name) {
+        super(id);
         this.name = name;
-        this.issueId = issueId;
     }
 
     public String getName() {
@@ -20,11 +21,11 @@ public abstract class Issue {
         this.name = name;
     }
 
-    public Long getIssueId() {
-        return issueId;
-    }
-
-    public void setIssueId(Long issueId) {
-        this.issueId = issueId;
+    @Override
+    public String toString() {
+        return "Issue{" +
+                "id=" + getId() +
+                ", name='" + getName() +
+                '}';
     }
 }

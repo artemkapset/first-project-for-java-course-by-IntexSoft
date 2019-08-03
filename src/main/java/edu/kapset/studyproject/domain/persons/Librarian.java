@@ -9,8 +9,13 @@ public class Librarian extends Person {
     public Librarian() {
     }
 
-    public Librarian(String surName, String givenName, String patronymic, Integer category) {
-        super(surName, givenName, patronymic);
+    public Librarian(Long id, String surName, String givenName, Integer category) {
+        super(id, surName, givenName);
+        this.category = category;
+    }
+
+    public Librarian(Long id, String surName, String givenName, String patronymic, Integer category) {
+        super(id, surName, givenName, patronymic);
         this.category = category;
     }
 
@@ -20,5 +25,25 @@ public class Librarian extends Person {
 
     public void setCategory(Integer category) {
         this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        if (getPatronymic() != null) {
+            return "Librarian{" +
+                    "id=" + getId() +
+                    ", surName='" + getSurName() + '\'' +
+                    ", givenName='" + getGivenName() + '\'' +
+                    ", patronymic='" + getPatronymic() + '\'' +
+                    ", category='" + getCategory() + '\'' +
+                    '}';
+        } else {
+            return "Librarian{" +
+                    "id=" + getId() +
+                    ", surName='" + getSurName() + '\'' +
+                    ", givenName='" + getGivenName() + '\'' +
+                    ", category='" + getCategory() + '\'' +
+                    '}';
+        }
     }
 }

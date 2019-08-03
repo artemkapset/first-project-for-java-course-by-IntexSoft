@@ -4,23 +4,23 @@ import java.time.LocalDate;
 
 public class Journal extends Issue{
 
-    private Integer number;
+    private String number;
     private LocalDate dateOfIssue;
 
     public Journal() {
     }
 
-    public Journal(String name, Long issueId, Integer number, LocalDate dateOfIssue) {
-        super(name, issueId);
+    public Journal(Long id, String name, String number, LocalDate dateOfIssue) {
+        super(id, name);
         this.number = number;
         this.dateOfIssue = dateOfIssue;
     }
 
-    public Integer getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -30,5 +30,15 @@ public class Journal extends Issue{
 
     public void setDateOfIssue(LocalDate dateOfIssue) {
         this.dateOfIssue = dateOfIssue;
+    }
+
+    @Override
+    public String toString() {
+        return "Journal{" +
+                "id=" + getId() +
+                ", name='" + getName() +
+                ", number='" + getNumber() +
+                ", dateOfIssue=" + getDateOfIssue() +
+                '}';
     }
 }

@@ -11,8 +11,8 @@ public class Book extends Issue{
     public Book() {
     }
 
-    public Book(String name, Long issueId, Author author, LocalDate yearOfIssue) {
-        super(name, issueId);
+    public Book(Long id, String name, Author author, LocalDate yearOfIssue) {
+        super(id, name);
         this.author = author;
         this.yearOfIssue = yearOfIssue;
     }
@@ -31,5 +31,15 @@ public class Book extends Issue{
 
     public void setYearOfIssue(LocalDate yearOfIssue) {
         this.yearOfIssue = yearOfIssue;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", author=" + getAuthor() +
+                ", yearOfIssue=" + getYearOfIssue() +
+                '}';
     }
 }

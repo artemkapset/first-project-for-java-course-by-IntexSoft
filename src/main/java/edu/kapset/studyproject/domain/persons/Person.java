@@ -1,6 +1,8 @@
 package edu.kapset.studyproject.domain.persons;
 
-public abstract class Person {
+import edu.kapset.studyproject.domain.BaseEntity;
+
+public abstract class Person extends BaseEntity {
     private String surName;
     private String givenName;
     private String patronymic;
@@ -8,7 +10,14 @@ public abstract class Person {
     public Person() {
     }
 
-    public Person(String surName, String givenName, String patronymic) {
+    public Person(Long id, String surName, String givenName) {
+        super(id);
+        this.surName = surName;
+        this.givenName = givenName;
+    }
+
+    public Person(Long id, String surName, String givenName, String patronymic) {
+        super(id);
         this.surName = surName;
         this.givenName = givenName;
         this.patronymic = patronymic;
@@ -36,5 +45,23 @@ public abstract class Person {
 
     public void setPatronymic(String patronymic) {
         this.patronymic = patronymic;
+    }
+
+    @Override
+    public String toString() {
+        if (patronymic != null) {
+            return "Person{" +
+                    "id=" + getId() +
+                    ", surName='" + getSurName() + '\'' +
+                    ", givenName='" + getGivenName() + '\'' +
+                    ", patronymic='" + getPatronymic() + '\'' +
+                    '}';
+        } else {
+            return "Person{" +
+                    "id=" + getId() +
+                    ", surName='" + getSurName() + '\'' +
+                    ", givenName='" + getGivenName() + '\'' +
+                    '}';
+        }
     }
 }

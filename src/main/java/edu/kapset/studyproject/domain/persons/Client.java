@@ -2,21 +2,35 @@ package edu.kapset.studyproject.domain.persons;
 
 
 public class Client extends Person {
-    private Long clientId;
+
+    //TODO - продумать необходимость наличия поля List<Issue> issues ("взятые клиентом издания")
 
     public Client() {
     }
 
-    public Client(String surName, String givenName, String patronymic, Long readerId) {
-        super(surName, givenName, patronymic);
-        this.clientId = readerId;
+    public Client(Long id, String surName, String givenName) {
+        super(id, surName, givenName);
     }
 
-    public Long getClientId() {
-        return clientId;
+    public Client(Long id, String surName, String givenName, String patronymic) {
+        super(id, surName, givenName, patronymic);
     }
 
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
+    @Override
+    public String toString() {
+        if (getPatronymic() != null) {
+            return "Client{" +
+                    "id=" + getId() +
+                    ", surName='" + getSurName() + '\'' +
+                    ", givenName='" + getGivenName() + '\'' +
+                    ", patronymic='" + getPatronymic() + '\'' +
+                    '}';
+        } else {
+            return "Client{" +
+                    "id=" + getId() +
+                    ", surName='" + getSurName() + '\'' +
+                    ", givenName='" + getGivenName() + '\'' +
+                    '}';
+        }
     }
 }

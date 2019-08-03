@@ -3,23 +3,27 @@ package edu.kapset.studyproject.domain;
 import edu.kapset.studyproject.domain.issues.Issue;
 import edu.kapset.studyproject.domain.persons.Client;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
-    private Long orderId;
+public class Order extends BaseEntity {
+
     private LocalDateTime orderDate;
     private OrderStatus orderStatus;
     private Client client;
     private List<Issue> issues;
 
-    public Long getOrderId() {
-        return orderId;
+    public Order() {
     }
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+    public Order(Long id, LocalDateTime orderDate, OrderStatus orderStatus, Client client, List<Issue> issues) {
+        super(id);
+        this.orderDate = orderDate;
+        this.orderStatus = orderStatus;
+        this.client = client;
+        this.issues = issues;
     }
 
     public LocalDateTime getOrderDate() {
@@ -55,5 +59,16 @@ public class Order {
             issues = new ArrayList<>();
         }
         issues.add(issue);
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + getId() +
+                ", orderDate=" + getOrderDate() +
+                ", orderStatus=" + getOrderStatus() +
+                ", client=" + getClient() +
+                ", issues=" + getIssues() +
+                '}';
     }
 }
