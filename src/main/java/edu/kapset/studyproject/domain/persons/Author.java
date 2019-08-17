@@ -19,15 +19,13 @@ public class Author extends Person {
     public String toString() {
         if (getPatronymic() != null) {
             return "Author{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
+                    "surname='" + getSurname() + '\'' +
                     ", givenname='" + getGivenname() + '\'' +
                     ", patronymic='" + getPatronymic() + '\'' +
                     '}';
         } else {
             return "Author{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
+                    "surname='" + getSurname() + '\'' +
                     ", givenname='" + getGivenname() + '\'' +
                     '}';
         }

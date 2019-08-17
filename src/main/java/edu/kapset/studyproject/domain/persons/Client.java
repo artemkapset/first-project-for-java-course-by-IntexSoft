@@ -22,15 +22,13 @@ public class Client extends Person {
     public String toString() {
         if (getPatronymic() != null) {
             return "Client{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
+                    "surname='" + getSurname() + '\'' +
                     ", givenname='" + getGivenname() + '\'' +
                     ", patronymic='" + getPatronymic() + '\'' +
                     '}';
         } else {
             return "Client{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
+                    "surname='" + getSurname() + '\'' +
                     ", givenname='" + getGivenname() + '\'' +
                     '}';
         }

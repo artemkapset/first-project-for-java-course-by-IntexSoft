@@ -42,14 +42,27 @@ public class Runner {
         issues2.add(book1);
 
         Order order1 = new Order(LocalDateTime.now(), OrderStatus.UNCHECKED, client1, issues1);
-        Order order2 = new Order(LocalDateTime.now(), OrderStatus.UNCHECKED, client2, issues2);
+        Order order2 = new Order(LocalDateTime.now(), OrderStatus.CHECKED, client2, issues2);
+        Order order3 = new Order(LocalDateTime.now(), OrderStatus.UNCHECKED, client2, issues1);
 
         OrderService osi = OrderServiceImpl.getInstance();
         osi.deleteAll();
         osi.save(order1);
         osi.save(order2);
+        osi.save(order3);
+
         System.out.println(osi.getById(2l).orElseThrow(() -> new RuntimeException("Order is not found")));
         System.out.println("-------------------");
+
+        osi.getOrdersBySurname("Petrov").forEach(System.out::println);
+        System.out.println("-------------------");
+
+        osi.getOrdersByStatus(OrderStatus.UNCHECKED).forEach(System.out::println);
+        System.out.println("-------------------");
+
+        osi.getOrdersByStatus(OrderStatus.CHECKED).forEach(System.out::println);
+        System.out.println("-------------------");
+
         osi.getAll().forEach(System.out::println);
     }
 }

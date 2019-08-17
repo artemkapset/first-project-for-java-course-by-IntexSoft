@@ -28,8 +28,7 @@ public class Journal extends Issue{
     @Override
     public String toString() {
         return "Journal{" +
-                "id=" + getId() +
-                ", name='" + getName() +
+                "name='" + getName() +
                 ", number='" + getNumber() +
                 ", dateOfIssue=" + getDateOfIssue() +
                 '}';

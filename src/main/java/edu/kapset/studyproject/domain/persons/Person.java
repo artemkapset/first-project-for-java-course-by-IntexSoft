@@ -45,21 +45,4 @@ public abstract class Person extends BaseEntity {
         this.patronymic = patronymic;
     }
 
-    @Override
-    public String toString() {
-        if (patronymic != null) {
-            return "Person{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
-                    ", givenname='" + getGivenname() + '\'' +
-                    ", patronymic='" + getPatronymic() + '\'' +
-                    '}';
-        } else {
-            return "Person{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
-                    ", givenname='" + getGivenname() + '\'' +
-                    '}';
-        }
-    }
 }

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static java.util.stream.Collectors.toList;
+
 public class OrderDaoImpl extends GenericDaoImpl<Order> implements OrderDao {
 
     private static OrderDao instance;
@@ -32,11 +34,18 @@ public class OrderDaoImpl extends GenericDaoImpl<Order> implements OrderDao {
 
     @Override
     public List<Order> getOrdersBySurname(String s) {
-        return new ArrayList<>();
+        return getCollection()
+                .stream()
+                .filter((o) -> o.getClient().getSurname().equals(s))
+                .collect(toList());
     }
 
     @Override
     public List<Order> getOrdersByStatus(OrderStatus orderStatus) {
-        return new ArrayList<>();
+        return getCollection()
+                .stream()
+                .filter((o) -> o.getOrderStatus().equals(orderStatus))
+                .collect(toList());
+
     }
 }

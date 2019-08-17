@@ -82,7 +82,7 @@ public abstract class GenericDaoImpl<T extends BaseEntity> implements GenericDao
         writer.write(path, tList);
     }
 
-    private Collection<T> getCollection() {
+    protected Collection<T> getCollection() {
         return reader
                 .read(path)
                 .stream()

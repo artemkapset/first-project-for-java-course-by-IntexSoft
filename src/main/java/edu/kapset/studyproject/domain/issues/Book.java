@@ -29,8 +29,7 @@ public class Book extends Issue{
     @Override
     public String toString() {
         return "Book{" +
-                "id=" + getId() +
-                ", name='" + getName() + '\'' +
+                "name='" + getName() + '\'' +
                 ", author=" + getAuthor() +
                 ", dateOfIssue=" + getDateOfIssue() +
                 '}';

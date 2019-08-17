@@ -32,16 +32,14 @@ public class Librarian extends Person {
     public String toString() {
         if (getPatronymic() != null) {
             return "Librarian{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
+                    "surname='" + getSurname() + '\'' +
                     ", givenname='" + getGivenname() + '\'' +
                     ", patronymic='" + getPatronymic() + '\'' +
                     ", category='" + getCategory() + '\'' +
                     '}';
         } else {
             return "Librarian{" +
-                    "id=" + getId() +
-                    ", surname='" + getSurname() + '\'' +
+                    "surname='" + getSurname() + '\'' +
                     ", givenname='" + getGivenname() + '\'' +
                     ", category='" + getCategory() + '\'' +
                     '}';
