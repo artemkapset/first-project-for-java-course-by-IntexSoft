@@ -10,12 +10,12 @@ public class Client extends Person {
     public Client() {
     }
 
-    public Client(Long id, String surname, String givenname) {
-        super(id, surname, givenname);
+    public Client(String surname, String givenname) {
+        super(surname, givenname);
     }
 
-    public Client(Long id, String surname, String givenname, String patronymic) {
-        super(id, surname, givenname, patronymic);
+    public Client(String surname, String givenname, String patronymic) {
+        super(surname, givenname, patronymic);
     }
 
     @Override

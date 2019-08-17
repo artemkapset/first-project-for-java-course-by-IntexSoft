@@ -7,12 +7,12 @@ public class Author extends Person {
     public Author() {
     }
 
-    public Author(Long id, String surname, String givenname) {
-        super(id, surname, givenname);
+    public Author(String surname, String givenname) {
+        super(surname, givenname);
     }
 
-    public Author(Long id, String surname, String givenname, String patronymic) {
-        super(id, surname, givenname, patronymic);
+    public Author(String surname, String givenname, String patronymic) {
+        super(surname, givenname, patronymic);
     }
 
     @Override

@@ -8,15 +8,13 @@ import java.time.LocalDate;
 public class Journal extends Issue{
 
     private String number;
-    private LocalDate dateOfIssue;
 
     public Journal() {
     }
 
-    public Journal(Long id, String name, String number, LocalDate dateOfIssue) {
-        super(id, name);
+    public Journal(String name, LocalDate dateOfIssue, String number) {
+        super(name, dateOfIssue);
         this.number = number;
-        this.dateOfIssue = dateOfIssue;
     }
 
     public String getNumber() {
@@ -25,14 +23,6 @@ public class Journal extends Issue{
 
     public void setNumber(String number) {
         this.number = number;
-    }
-
-    public LocalDate getDateOfIssue() {
-        return dateOfIssue;
-    }
-
-    public void setDateOfIssue(LocalDate dateOfIssue) {
-        this.dateOfIssue = dateOfIssue;
     }
 
     @Override

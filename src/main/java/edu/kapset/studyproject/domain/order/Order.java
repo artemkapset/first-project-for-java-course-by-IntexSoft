@@ -20,8 +20,7 @@ public class Order extends BaseEntity {
     public Order() {
     }
 
-    public Order(Long id, LocalDateTime orderDate, OrderStatus orderStatus, Client client, List<Issue> issues) {
-        super(id);
+    public Order(LocalDateTime orderDate, OrderStatus orderStatus, Client client, List<Issue> issues) {
         this.orderDate = orderDate;
         this.orderStatus = orderStatus;
         this.client = client;

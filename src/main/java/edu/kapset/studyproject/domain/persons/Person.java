@@ -10,14 +10,12 @@ public abstract class Person extends BaseEntity {
     public Person() {
     }
 
-    public Person(Long id, String surname, String givenname) {
-        super(id);
+    public Person(String surname, String givenname) {
         this.surname = surname;
         this.givenname = givenname;
     }
 
-    public Person(Long id, String surname, String givenname, String patronymic) {
-        super(id);
+    public Person(String surname, String givenname, String patronymic) {
         this.surname = surname;
         this.givenname = givenname;
         this.patronymic = patronymic;

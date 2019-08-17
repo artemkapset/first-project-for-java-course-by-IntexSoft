@@ -10,13 +10,13 @@ public class Librarian extends Person {
     public Librarian() {
     }
 
-    public Librarian(Long id, String surname, String givenname, Integer category) {
-        super(id, surname, givenname);
+    public Librarian(String surname, String givenname, Integer category) {
+        super(surname, givenname);
         this.category = category;
     }
 
-    public Librarian(Long id, String surname, String givenname, String patronymic, Integer category) {
-        super(id, surname, givenname, patronymic);
+    public Librarian(String surname, String givenname, String patronymic, Integer category) {
+        super(surname, givenname, patronymic);
         this.category = category;
     }
 

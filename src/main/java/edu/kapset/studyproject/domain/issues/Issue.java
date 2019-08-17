@@ -2,15 +2,18 @@ package edu.kapset.studyproject.domain.issues;
 
 import edu.kapset.studyproject.domain.BaseEntity;
 
+import java.time.LocalDate;
+
 public abstract class Issue extends BaseEntity {
     private String name;
+    private LocalDate dateOfIssue;
 
     public Issue() {
     }
 
-    public Issue(Long id, String name) {
-        super(id);
+    public Issue(String name, LocalDate dateOfIssue) {
         this.name = name;
+        this.dateOfIssue = dateOfIssue;
     }
 
     public String getName() {
@@ -21,11 +24,12 @@ public abstract class Issue extends BaseEntity {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Issue{" +
-                "id=" + getId() +
-                ", name='" + getName() +
-                '}';
+    public LocalDate getDateOfIssue() {
+        return dateOfIssue;
     }
+
+    public void setDateOfIssue(LocalDate dateOfIssue) {
+        this.dateOfIssue = dateOfIssue;
+    }
+
 }
