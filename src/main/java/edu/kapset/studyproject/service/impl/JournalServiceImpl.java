@@ -6,6 +6,7 @@ import edu.kapset.studyproject.domain.issues.Journal;
 import edu.kapset.studyproject.service.JournalService;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,41 +27,43 @@ public class JournalServiceImpl implements JournalService {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
+    @Override
+    public List<Journal> getByName(String s) {
+        return journalDao.getByName(s);
+    }
 
     @Override
     public Optional<Journal> save(Journal journal) {
-        return Optional.ofNullable(journal);
+        return journalDao.save(journal);
     }
 
     @Override
     public Optional<Journal> update(Journal journal) {
-        return Optional.ofNullable(journal);
+        return journalDao.update(journal);
     }
 
     @Override
-    public List<Journal> getAll() {
-        return new ArrayList<>();
+    public Collection<Journal> getAll() {
+        return journalDao.getAll();
     }
 
     @Override
-    public Optional<Journal> getByName(String s) {
-        Journal journal = null;
-        return Optional.ofNullable(journal);
+    public Optional<Journal> getById(Long id) {
+        return journalDao.getById(id);
     }
 
     @Override
     public void delete(Journal journal) {
-
+        journalDao.delete(journal);
     }
 
     @Override
     public void deleteAll() {
-
+        journalDao.deleteAll();
     }
 
     @Override
-    public void deleteByName(String s) {
-
+    public void deleteById(Long id) {
+        journalDao.deleteById(id);
     }
 }

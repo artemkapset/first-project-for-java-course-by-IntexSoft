@@ -5,14 +5,19 @@ import edu.kapset.studyproject.domain.issues.Book;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class BookDaoImpl implements BookDao {
+public class BookDaoImpl extends GenericDaoImpl<Book> implements BookDao {
 
     private static BookDao instance;
 
     private BookDaoImpl() {
-
+        super(Book.class, (o) -> {
+            Book book = null;
+            if (o instanceof Book) {
+                book = (Book) o;
+            }
+            return book;
+        });
     }
 
     public static BookDao getInstance() {
@@ -22,46 +27,13 @@ public class BookDaoImpl implements BookDao {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
-
     @Override
     public List<Book> getByAuthor(String s) {
         return new ArrayList<>();
     }
 
     @Override
-    public Optional<Book> save(Book book) {
-        return Optional.ofNullable(book);
-    }
-
-    @Override
-    public Optional<Book> update(Book book) {
-        return Optional.ofNullable(book);
-    }
-
-    @Override
-    public List<Book> getAll() {
+    public List<Book> getByName(String s) {
         return new ArrayList<>();
-    }
-
-    @Override
-    public Optional<Book> getByName(String s) {
-        Book book = null;
-        return Optional.ofNullable(book);
-    }
-
-    @Override
-    public void delete(Book book) {
-
-    }
-
-    @Override
-    public void deleteAll() {
-
-    }
-
-    @Override
-    public void deleteByName(String s) {
-
     }
 }

@@ -1,7 +1,10 @@
 package edu.kapset.studyproject.domain.issues;
 
+import edu.kapset.studyproject.annotation.FileStorage;
+
 import java.time.LocalDate;
 
+@FileStorage(name = "Journal")
 public class Journal extends Issue{
 
     private String number;

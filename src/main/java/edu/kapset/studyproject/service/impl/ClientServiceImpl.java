@@ -6,6 +6,7 @@ import edu.kapset.studyproject.domain.persons.Client;
 import edu.kapset.studyproject.service.ClientService;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,47 +27,43 @@ public class ClientServiceImpl implements ClientService {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
-
-    @Override
-    public Optional<Client> getById(Long id) {
-        Client client = null;
-        return Optional.ofNullable(client);
-    }
-
     @Override
     public Optional<Client> save(Client client) {
-        return Optional.ofNullable(client);
+        return clientDao.save(client);
     }
 
     @Override
     public Optional<Client> update(Client client) {
-        return Optional.ofNullable(client);
+        return clientDao.update(client);
     }
 
     @Override
-    public List<Client> getAll() {
-        return new ArrayList<>();
+    public Collection<Client> getAll() {
+        return clientDao.getAll();
     }
 
     @Override
-    public Optional<Client> getByName(String s) {
-        Client client = null;
-        return Optional.ofNullable(client);
+    public Optional<Client> getById(Long id) {
+        return clientDao.getById(id);
     }
 
     @Override
     public void delete(Client client) {
-
+        clientDao.delete(client);
     }
 
     @Override
     public void deleteAll() {
-
+        clientDao.deleteAll();
     }
 
     @Override
-    public void deleteByName(String s) {
+    public void deleteById(Long id) {
+        clientDao.deleteById(id);
+    }
 
+    @Override
+    public List<Client> getBySurname(String s) {
+        return clientDao.getBySurname(s);
     }
 }

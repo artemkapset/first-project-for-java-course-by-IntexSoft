@@ -6,6 +6,7 @@ import edu.kapset.studyproject.domain.persons.Author;
 import edu.kapset.studyproject.service.AuthorService;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,41 +27,43 @@ public class AuthorServiceImpl implements AuthorService {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
+    @Override
+    public List<Author> getBySurname(String s) {
+        return authorDao.getBySurname(s);
+    }
 
     @Override
     public Optional<Author> save(Author author) {
-        return Optional.ofNullable(author);
+        return authorDao.save(author);
     }
 
     @Override
     public Optional<Author> update(Author author) {
-        return Optional.ofNullable(author);
+        return authorDao.update(author);
     }
 
     @Override
-    public List<Author> getAll() {
-        return new ArrayList<>();
+    public Collection<Author> getAll() {
+        return authorDao.getAll();
     }
 
     @Override
-    public Optional<Author> getByName(String s) {
-        Author author = null;
-        return Optional.ofNullable(author);
+    public Optional<Author> getById(Long id) {
+        return authorDao.getById(id);
     }
 
     @Override
     public void delete(Author author) {
-
+        authorDao.delete(author);
     }
 
     @Override
     public void deleteAll() {
-
+        authorDao.deleteAll();
     }
 
     @Override
-    public void deleteByName(String s) {
-
+    public void deleteById(Long id) {
+        authorDao.deleteById(id);
     }
 }

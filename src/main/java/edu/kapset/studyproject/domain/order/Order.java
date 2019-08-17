@@ -1,13 +1,15 @@
-package edu.kapset.studyproject.domain;
+package edu.kapset.studyproject.domain.order;
 
+import edu.kapset.studyproject.annotation.FileStorage;
+import edu.kapset.studyproject.domain.BaseEntity;
 import edu.kapset.studyproject.domain.issues.Issue;
 import edu.kapset.studyproject.domain.persons.Client;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@FileStorage(name = "Order")
 public class Order extends BaseEntity {
 
     private LocalDateTime orderDate;

@@ -5,5 +5,9 @@ import edu.kapset.studyproject.domain.persons.Librarian;
 import java.util.List;
 
 public interface LibrarianService extends PersonService<Librarian> {
-    List<Librarian> getByCategory(Integer i);
+    boolean fire(Librarian librarian);
+
+    boolean hire(Librarian librarian);
+
+    boolean promote(Librarian librarian);
 }

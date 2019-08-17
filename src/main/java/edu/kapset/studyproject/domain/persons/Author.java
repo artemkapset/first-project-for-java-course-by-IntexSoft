@@ -1,15 +1,18 @@
 package edu.kapset.studyproject.domain.persons;
 
+import edu.kapset.studyproject.annotation.FileStorage;
+
+@FileStorage(name = "Author")
 public class Author extends Person {
     public Author() {
     }
 
-    public Author(Long id, String surName, String givenName) {
-        super(id, surName, givenName);
+    public Author(Long id, String surname, String givenname) {
+        super(id, surname, givenname);
     }
 
-    public Author(Long id, String surName, String givenName, String patronymic) {
-        super(id, surName, givenName, patronymic);
+    public Author(Long id, String surname, String givenname, String patronymic) {
+        super(id, surname, givenname, patronymic);
     }
 
     @Override
@@ -17,15 +20,15 @@ public class Author extends Person {
         if (getPatronymic() != null) {
             return "Author{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     ", patronymic='" + getPatronymic() + '\'' +
                     '}';
         } else {
             return "Author{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     '}';
         }
     }

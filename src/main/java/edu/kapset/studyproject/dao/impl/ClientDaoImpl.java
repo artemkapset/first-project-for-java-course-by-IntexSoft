@@ -5,14 +5,19 @@ import edu.kapset.studyproject.domain.persons.Client;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class ClientDaoImpl implements ClientDao {
+public class ClientDaoImpl extends GenericDaoImpl<Client> implements ClientDao {
 
     private static ClientDao instance;
 
     private ClientDaoImpl() {
-
+        super(Client.class, (o) -> {
+            Client client = null;
+            if (o instanceof Client) {
+                client = (Client) o;
+            }
+            return client;
+        });
     }
 
     public static ClientDao getInstance() {
@@ -22,47 +27,8 @@ public class ClientDaoImpl implements ClientDao {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
-
     @Override
-    public Optional<Client> getById(Long id) {
-        Client client = null;
-        return Optional.ofNullable(client);
-    }
-
-    @Override
-    public Optional<Client> save(Client client) {
-        return Optional.ofNullable(client);
-    }
-
-    @Override
-    public Optional<Client> update(Client client) {
-        return Optional.ofNullable(client);
-    }
-
-    @Override
-    public List<Client> getAll() {
+    public List<Client> getBySurname(String s) {
         return new ArrayList<>();
-    }
-
-    @Override
-    public Optional<Client> getByName(String s) {
-        Client client = null;
-        return Optional.ofNullable(client);
-    }
-
-    @Override
-    public void delete(Client client) {
-
-    }
-
-    @Override
-    public void deleteAll() {
-
-    }
-
-    @Override
-    public void deleteByName(String s) {
-
     }
 }

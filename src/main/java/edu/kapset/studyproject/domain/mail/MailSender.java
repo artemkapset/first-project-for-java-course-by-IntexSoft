@@ -1,6 +1,6 @@
 package edu.kapset.studyproject.domain.mail;
 
-import edu.kapset.studyproject.domain.Order;
+import edu.kapset.studyproject.domain.order.Order;
 
 public class MailSender {
     //TODO - прописать реализацию

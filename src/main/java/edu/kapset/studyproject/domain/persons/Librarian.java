@@ -1,7 +1,8 @@
 package edu.kapset.studyproject.domain.persons;
 
-import edu.kapset.studyproject.domain.persons.Person;
+import edu.kapset.studyproject.annotation.FileStorage;
 
+@FileStorage(name = "Librarian")
 public class Librarian extends Person {
 
     private Integer category;
@@ -9,13 +10,13 @@ public class Librarian extends Person {
     public Librarian() {
     }
 
-    public Librarian(Long id, String surName, String givenName, Integer category) {
-        super(id, surName, givenName);
+    public Librarian(Long id, String surname, String givenname, Integer category) {
+        super(id, surname, givenname);
         this.category = category;
     }
 
-    public Librarian(Long id, String surName, String givenName, String patronymic, Integer category) {
-        super(id, surName, givenName, patronymic);
+    public Librarian(Long id, String surname, String givenname, String patronymic, Integer category) {
+        super(id, surname, givenname, patronymic);
         this.category = category;
     }
 
@@ -32,16 +33,16 @@ public class Librarian extends Person {
         if (getPatronymic() != null) {
             return "Librarian{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     ", patronymic='" + getPatronymic() + '\'' +
                     ", category='" + getCategory() + '\'' +
                     '}';
         } else {
             return "Librarian{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     ", category='" + getCategory() + '\'' +
                     '}';
         }

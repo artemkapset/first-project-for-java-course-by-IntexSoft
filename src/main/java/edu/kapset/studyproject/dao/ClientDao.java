@@ -5,5 +5,4 @@ import edu.kapset.studyproject.domain.persons.Client;
 import java.util.Optional;
 
 public interface ClientDao extends PersonDao<Client> {
-    Optional<Client> getById(Long id);
 }

@@ -1,19 +1,21 @@
 package edu.kapset.studyproject.domain.persons;
 
+import edu.kapset.studyproject.annotation.FileStorage;
 
+@FileStorage(name = "Client")
 public class Client extends Person {
 
-    //TODO - продумать необходимость наличия поля List<Issue> issues ("взятые клиентом издания")
+    //TODO - List<Issue> issues ("взятые клиентом издания") - ?
 
     public Client() {
     }
 
-    public Client(Long id, String surName, String givenName) {
-        super(id, surName, givenName);
+    public Client(Long id, String surname, String givenname) {
+        super(id, surname, givenname);
     }
 
-    public Client(Long id, String surName, String givenName, String patronymic) {
-        super(id, surName, givenName, patronymic);
+    public Client(Long id, String surname, String givenname, String patronymic) {
+        super(id, surname, givenname, patronymic);
     }
 
     @Override
@@ -21,15 +23,15 @@ public class Client extends Person {
         if (getPatronymic() != null) {
             return "Client{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     ", patronymic='" + getPatronymic() + '\'' +
                     '}';
         } else {
             return "Client{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     '}';
         }
     }

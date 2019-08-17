@@ -5,14 +5,19 @@ import edu.kapset.studyproject.domain.issues.Journal;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class JournalDaoImpl implements JournalDao {
+public class JournalDaoImpl extends GenericDaoImpl<Journal> implements JournalDao {
 
     private static JournalDao instance;
 
     private JournalDaoImpl() {
-
+        super(Journal.class, (o) -> {
+            Journal journal = null;
+            if (o instanceof Journal) {
+                journal = (Journal) o;
+            }
+            return journal;
+        });
     }
 
     public static JournalDao getInstance() {
@@ -22,41 +27,8 @@ public class JournalDaoImpl implements JournalDao {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
-
     @Override
-    public Optional<Journal> save(Journal journal) {
-        return Optional.ofNullable(journal);
-    }
-
-    @Override
-    public Optional<Journal> update(Journal journal) {
-        return Optional.ofNullable(journal);
-    }
-
-    @Override
-    public List<Journal> getAll() {
+    public List<Journal> getByName(String s) {
         return new ArrayList<>();
-    }
-
-    @Override
-    public Optional<Journal> getByName(String s) {
-        Journal journal = null;
-        return Optional.ofNullable(journal);
-    }
-
-    @Override
-    public void delete(Journal journal) {
-
-    }
-
-    @Override
-    public void deleteAll() {
-
-    }
-
-    @Override
-    public void deleteByName(String s) {
-
     }
 }

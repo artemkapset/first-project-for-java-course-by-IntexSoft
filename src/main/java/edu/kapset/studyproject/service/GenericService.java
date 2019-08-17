@@ -10,11 +10,11 @@ public interface GenericService<T> {
 
     Collection<T> getAll();
 
-    Optional<T> getByName(String s);
+    Optional<T> getById(Long id);
 
     void delete(T t);
 
     void deleteAll();
 
-    void deleteByName(String s);
+    void deleteById(Long id);
 }

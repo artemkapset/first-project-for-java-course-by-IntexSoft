@@ -6,6 +6,7 @@ import edu.kapset.studyproject.domain.persons.Librarian;
 import edu.kapset.studyproject.service.LibrarianService;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,46 +27,64 @@ public class LibrarianServiceImpl implements LibrarianService {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
+    @Override
+    public boolean fire(Librarian librarian) {
+        //...
+        librarianDao.delete(librarian);
+        return true;
+    }
 
     @Override
-    public List<Librarian> getByCategory(Integer i) {
-        return new ArrayList<>();
+    public boolean hire(Librarian librarian) {
+        //...
+        librarianDao.save(librarian);
+        return true;
+    }
+
+    @Override
+    public boolean promote(Librarian librarian) {
+        //...
+        librarianDao.update(librarian);
+        return true;
+    }
+
+    @Override
+    public List<Librarian> getBySurname(String s) {
+        return librarianDao.getBySurname(s);
     }
 
     @Override
     public Optional<Librarian> save(Librarian librarian) {
-        return Optional.ofNullable(librarian);
+        return librarianDao.save(librarian);
     }
 
     @Override
     public Optional<Librarian> update(Librarian librarian) {
-        return Optional.ofNullable(librarian);
+        return librarianDao.update(librarian);
     }
 
     @Override
-    public List<Librarian> getAll() {
-        return new ArrayList<>();
+    public Collection<Librarian> getAll() {
+        return librarianDao.getAll();
     }
 
     @Override
-    public Optional<Librarian> getByName(String s) {
-        Librarian librarian = null;
-        return Optional.ofNullable(librarian);
+    public Optional<Librarian> getById(Long id) {
+        return librarianDao.getById(id);
     }
 
     @Override
     public void delete(Librarian librarian) {
-
+        librarianDao.delete(librarian);
     }
 
     @Override
     public void deleteAll() {
-
+        librarianDao.deleteAll();
     }
 
     @Override
-    public void deleteByName(String s) {
+    public void deleteById(Long id) {
 
     }
 }

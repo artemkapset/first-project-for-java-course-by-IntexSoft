@@ -3,40 +3,40 @@ package edu.kapset.studyproject.domain.persons;
 import edu.kapset.studyproject.domain.BaseEntity;
 
 public abstract class Person extends BaseEntity {
-    private String surName;
-    private String givenName;
+    private String surname;
+    private String givenname;
     private String patronymic;
 
     public Person() {
     }
 
-    public Person(Long id, String surName, String givenName) {
+    public Person(Long id, String surname, String givenname) {
         super(id);
-        this.surName = surName;
-        this.givenName = givenName;
+        this.surname = surname;
+        this.givenname = givenname;
     }
 
-    public Person(Long id, String surName, String givenName, String patronymic) {
+    public Person(Long id, String surname, String givenname, String patronymic) {
         super(id);
-        this.surName = surName;
-        this.givenName = givenName;
+        this.surname = surname;
+        this.givenname = givenname;
         this.patronymic = patronymic;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public String getGivenName() {
-        return givenName;
+    public String getGivenname() {
+        return givenname;
     }
 
-    public void setGivenName(String givenName) {
-        this.givenName = givenName;
+    public void setGivenname(String givenname) {
+        this.givenname = givenname;
     }
 
     public String getPatronymic() {
@@ -52,15 +52,15 @@ public abstract class Person extends BaseEntity {
         if (patronymic != null) {
             return "Person{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     ", patronymic='" + getPatronymic() + '\'' +
                     '}';
         } else {
             return "Person{" +
                     "id=" + getId() +
-                    ", surName='" + getSurName() + '\'' +
-                    ", givenName='" + getGivenName() + '\'' +
+                    ", surname='" + getSurname() + '\'' +
+                    ", givenname='" + getGivenname() + '\'' +
                     '}';
         }
     }

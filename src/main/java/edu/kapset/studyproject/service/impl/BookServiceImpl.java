@@ -6,6 +6,7 @@ import edu.kapset.studyproject.domain.issues.Book;
 import edu.kapset.studyproject.service.BookService;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,46 +27,48 @@ public class BookServiceImpl implements BookService {
         return instance;
     }
 
-    // TODO - прописать реализацию методов
-
     @Override
     public List<Book> getByAuthor(String s) {
-        return new ArrayList<>();
+        return bookDao.getByAuthor(s);
+    }
+
+    @Override
+    public List<Book> getByName(String s) {
+        return bookDao.getByName(s);
     }
 
     @Override
     public Optional<Book> save(Book book) {
-        return Optional.ofNullable(book);
+        return bookDao.save(book);
     }
 
     @Override
     public Optional<Book> update(Book book) {
-        return Optional.ofNullable(book);
+        return bookDao.update(book);
     }
 
     @Override
-    public List<Book> getAll() {
-        return new ArrayList<>();
+    public Collection<Book> getAll() {
+        return bookDao.getAll();
     }
 
     @Override
-    public Optional<Book> getByName(String s) {
-        Book book = null;
-        return Optional.ofNullable(book);
+    public Optional<Book> getById(Long id) {
+        return bookDao.getById(id);
     }
 
     @Override
     public void delete(Book book) {
-
+        bookDao.delete(book);
     }
 
     @Override
     public void deleteAll() {
-
+        bookDao.deleteAll();
     }
 
     @Override
-    public void deleteByName(String s) {
-
+    public void deleteById(Long id) {
+        bookDao.deleteById(id);
     }
 }

@@ -1,9 +1,11 @@
 package edu.kapset.studyproject.domain.issues;
 
+import edu.kapset.studyproject.annotation.FileStorage;
 import edu.kapset.studyproject.domain.persons.Author;
 
 import java.time.LocalDate;
 
+@FileStorage(name = "Book")
 public class Book extends Issue{
     private Author author;
     private LocalDate yearOfIssue;
