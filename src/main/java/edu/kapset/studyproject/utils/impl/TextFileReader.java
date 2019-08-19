@@ -1,12 +1,16 @@
 package edu.kapset.studyproject.utils.impl;
 
 import edu.kapset.studyproject.utils.Reader;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class TextFileReader implements Reader <String> {
+
+    private static Logger logger = Logger.getLogger(TextFileReader.class);
+
     private static TextFileReader instance;
 
     public static TextFileReader getInstance() {
@@ -21,6 +25,7 @@ public class TextFileReader implements Reader <String> {
 
     @Override
     public Collection<Object> read(String source) {
+        logger.info("\"read\" method called");
         final ArrayList<Object> list = new ArrayList<>();
         try (ObjectInputStream objectInputStream =
                      new ObjectInputStream(new FileInputStream(new File(source)))) {
@@ -31,7 +36,7 @@ public class TextFileReader implements Reader <String> {
         } catch (EOFException e) {
             // empty - для остановки работы цикла по достижению конца файла
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error("Error in method \"read\"", e);
         }
         return list;
     }
